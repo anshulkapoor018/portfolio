@@ -20,7 +20,9 @@ const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ experienceData 
                                         <Image src={experience.logo} alt="Company Logo" layout="fill" objectFit="cover" className="rounded-xl" />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-semibold tracking-wide">{experience.company}</h3>
+                                        <a href={experience.companyUrl} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold tracking-wide hover:underline">
+                                            {experience.company}
+                                        </a>
                                         <h4 className="text-s font-semibold tracking-wide">{experience.position}</h4>
                                         <time className="text-xs tracking-wide uppercase dark:text-gray-600">{experience.dateStart} - {experience.dateEnd}</time>
                                     </div>

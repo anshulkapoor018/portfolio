@@ -2,8 +2,9 @@ export interface Education {
     logo: string;
     dateStart: string;
     dateEnd: string;
-    position: string;
-    company: string;
+    location: string;
+    college: string;
+    collegeUrl: string;
     experienceDetails: string;
 }
   

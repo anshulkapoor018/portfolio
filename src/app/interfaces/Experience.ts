@@ -4,6 +4,7 @@ export interface Experience {
     dateEnd: string;
     position: string;
     company: string;
+    companyUrl: string;
     experienceDetails: string;
   }
   
