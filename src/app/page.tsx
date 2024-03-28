@@ -9,7 +9,9 @@ const Home = () => {
   return (
     <div className='bg-white'>
       <Header />
+      <hr className="divider-gradient dark:bg-gray-100" />
       <ExperienceTimeline experienceData={experienceData} />
+      <hr className="divider-gradient dark:bg-gray-100" />
       <EducationTimeline educationData={educationData} />
     </div>
   );
