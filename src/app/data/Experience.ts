@@ -4,7 +4,7 @@ export const experienceData: Experience[] = [
     {
       dateStart: "Feb 2023",
       dateEnd: "Feb 2024",
-      logo: '/billgo.jpg',
+      logo: '/Billgo.jpg',
       position: 'Software Engineer III',
       company: 'BillGo',
       experienceDetails: `- Spearheaded the design, implementation, and maintenance of reusable UI components in SDK, enhancing frontend development efficiency and slashing code duplication significantly.\n - Led the delivery of a pivotal client-facing fintech product, catalyzing cross-functional team collaboration. Instrumental in processing hundreds of thousands of payments, the product managed over a billion dollars in transactions yearly, markedly enhancing the company's fintech industry standing.\n- Strategically enhanced the SDK to enable more efficient integration with third-party systems, resulting in a revolutionary 90% reduction in development time for the company's products.\n- Tackled compatibility and platform-specific challenges by adopting a modular architecture and rigorous testing, ensuring robust and scalable solutions.\n- Championed code refactoring, migrations, and upgrades, safeguarding codebase maintainability and scalability.`
@@ -12,7 +12,7 @@ export const experienceData: Experience[] = [
     {
       dateStart: "Jul 2021",
       dateEnd: "Jan 2023",
-      logo: '/billgo.jpg',
+      logo: '/Billgo.jpg',
       position: 'Software Engineer II',
       company: 'BillGo',
       experienceDetails: `- Innovated a multiplatform SDK encompassing a headless and a UI Library, setting a new standard in solution design.\n- Successfully delivered native iOS and Android applications, showcasing the SDK's proof of concept and technical viability.\n- Streamlined project workflows by implementing GitHub Actions, automating testing, building, and deployment, thereby liberating developers from manual tasks.\n- Halved application-flow testing time by automating end-to-end testing for the SDK with the Detox framework.\n- Deployed an internal React Native application to enhance backend API feature testing, accurately simulating client environments.\n- Pioneered data syncing and caching features using SyncTable in the UI SDK, unlocking new use cases and applications.\n- Developed a customizable theming system for the SDK application, employing CSS variables and modular native-base, enhancing UI adaptability, branding, and codebase scalability.`
