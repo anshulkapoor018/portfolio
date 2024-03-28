@@ -7,7 +7,7 @@ export const educationData: Education[] = [
       logo: '/stevens.jpg',
       position: 'Hoboken, New Jersey, USA',
       company: 'Stevens Institute of Technology',
-      experienceDetails: `- Spearheaded the design, implementation, and maintenance of reusable UI components in SDK, enhancing frontend development efficiency and slashing code duplication significantly.\n - Led the delivery of a pivotal client-facing fintech product, catalyzing cross-functional team collaboration. Instrumental in processing hundreds of thousands of payments, the product managed over a billion dollars in transactions yearly, markedly enhancing the company's fintech industry standing.\n- Strategically enhanced the SDK to enable more efficient integration with third-party systems, resulting in a revolutionary 90% reduction in development time for the company's products.\n- Tackled compatibility and platform-specific challenges by adopting a modular architecture and rigorous testing, ensuring robust and scalable solutions.\n- Championed code refactoring, migrations, and upgrades, safeguarding codebase maintainability and scalability.`
+      experienceDetails: `Master of Science in Software Engineering (Graduated Summa Cum Laude). Got really into Python programming and delved a lot in Data Structure and Algorithms on Leetcode, Along with some really intersting courses in college like Mobile Programming, Natural Language Processing, Web Programming and Software Architecture`
     },
     {
       dateStart: "Aug 2013",
