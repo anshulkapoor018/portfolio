@@ -21,7 +21,7 @@ export const experienceData: Experience[] = [
       dateStart: "Jun 2020",
       dateEnd: "Dec 2020",
       logo: '/idt.png',
-      position: 'Software Engineer II',
+      position: 'Software Engineer Intern',
       company: 'IDT Corporation',
       experienceDetails: `- Spearheaded the development of a suite of iOS14 widgets for the company's flagship product, leveraging a fully agile environment to enhance user interface and functionality.
       - Conceptualized and executed a Slack Workspace Application for server outage notifications, employing AWS Lambda for event processing, which significantly enhanced the operations team's visibility and responsiveness to production events.
@@ -30,10 +30,10 @@ export const experienceData: Experience[] = [
       - Engineered an autoscaling feature for ECS services using Terraform for the DevOps team, achieving a 10% reduction in service costs through enhanced resource management.`
     },
     {
-      dateStart: "Jun 2020",
-      dateEnd: "Dec 2020",
+      dateStart: "Dec 2017",
+      dateEnd: "Aug 2019",
       logo: '/visionias.png',
-      position: 'Software Engineer II',
+      position: 'Software Engineer',
       company: 'VisionIAS',
       experienceDetails: `- Created storage framework using AWS Service - S3 which helped app users download paid and free content seamlessly.
       - Accomplished API framework that helped protect data while making API calls using AES and RSA Encryption; eliminated 10% of existing codebase from every module and ~ 20% of code reduction overall.
@@ -42,8 +42,8 @@ export const experienceData: Experience[] = [
       - Mentored 2 interns and 1 Full-Time Employee; helped with company's culture, company specific tools, and processes.`
     },
     {
-      dateStart: "Jun 2020",
-      dateEnd: "Dec 2020",
+      dateStart: "Jun 2017",
+      dateEnd: "Aug 2017",
       logo: '/rivigo.png',
       position: 'Application Engineer',
       company: 'Rivigo',
