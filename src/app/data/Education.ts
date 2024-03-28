@@ -15,6 +15,6 @@ export const educationData: Education[] = [
       logo: '/jiit.png',
       position: 'Noida, Uttar Pradesh, India',
       company: 'Jaypee Institute of Information Technology',
-      experienceDetails: `Embarking on my tech adventure, I donned my explorer's hat for a Bachelor of Technology in Information Technology. It was here, amid the binary and bytes, that I first shook hands with programming—and we've been best friends ever since. Over those four action-packed years, I cooked up a smorgasbord of projects, each a flavor of my growing skill set. Curious to see my digital kitchen? Head over to my GitHub where the proof of the programming is in the repository!`
+      experienceDetails: `Embarking on my tech adventure, I donned my explorer's hat for a Bachelor of Technology in Information Technology. It was here, amid the binary and bytes, that I first shook hands with programming—and we've been best friends ever since. Over those four action-packed years, I cooked up a buffet of projects, each a flavor of my growing skill set. Curious to see my digital kitchen? Head over to my GitHub where the proof of the programming is in the repository!`
     },
   ];
