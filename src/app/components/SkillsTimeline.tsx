@@ -1,7 +1,6 @@
-import Image from 'next/image';
 import { Skills } from '../interfaces/Skills';
 
-const Skills: React.FC<Skills> = ({ skillDetails }) => {
+const SkillsTimeline: React.FC<Skills> = ({ skillDetails }) => {
   return (
     <section className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-400">
         <div className="container max-w-5xl px-4 py-12 mx-auto">
@@ -29,4 +28,4 @@ const Skills: React.FC<Skills> = ({ skillDetails }) => {
   );
 }
 
-export default Skills;
+export default SkillsTimeline;
