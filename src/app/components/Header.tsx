@@ -9,7 +9,7 @@ config.autoAddCss = false;
 
 const Header = () => {
     return (
-      <header className="bg-gray-100 p-4">
+      <header className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-400 p-4">
         <div className="container flex flex-col sm:flex-row justify-center items-center mx-auto">
           <div className="flex justify-center mb-4 sm:mb-0">
             <Image
