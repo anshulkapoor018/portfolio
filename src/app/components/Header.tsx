@@ -16,7 +16,7 @@ const Header = () => {
     const iconColor = theme === 'dark' ? 'white' : 'black';
 
     return (
-      <header className="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-400 p-4">
+      <header className="portfolio-section p-4">
         <div className="container flex flex-col sm:flex-row justify-center items-center mx-auto">
         <div className="flex justify-center mb-4 sm:mb-0">
           <div className="rounded-full shadow-2xl shadow-black dark:shadow-2xl dark:shadow-white/10">
@@ -30,8 +30,8 @@ const Header = () => {
           </div>
           </div>
           <div className="text-center sm:text-left sm:pl-6">
-            <h1 className="text-4xl font-semibold text-gray-900 dark:text-gray-400">Anshul Kapoor</h1>
-            <p className="max-w-2xl text-gray-600">
+            <h1 className="portfolio-section-title text-4xl">Anshul Kapoor</h1>
+            <p className="portfolio-muted max-w-2xl">
               Software Engineer focused on product and platform engineering, frontend architecture,
               microfrontend systems, GraphQL-driven applications, and AI-assisted engineering workflows.
             </p>

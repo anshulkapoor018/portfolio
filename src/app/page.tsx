@@ -12,15 +12,15 @@ import { projectsData } from './data/Projects';
 
 const Home = () => {
   return (
-    <div className='bg-white'>
+    <div className='portfolio-page'>
       <Header />
-      <hr className="divider-gradient bg-gray-100 dark:bg-gray-100" />
+      <hr className="divider-gradient" />
       <ExperienceTimeline experienceData={experienceData} />
-      <hr className="divider-gradient bg-gray-100 dark:bg-gray-100" />
+      <hr className="divider-gradient" />
       <EducationTimeline educationData={educationData} />
-      <hr className="divider-gradient bg-gray-100 dark:bg-gray-100" />
+      <hr className="divider-gradient" />
       <SkillsTimeline skillDetails={skillsData.skillDetails}/>
-      <hr className="divider-gradient bg-gray-100 dark:bg-gray-100" />
+      <hr className="divider-gradient" />
       <ProjectsTimeline projectsData={projectsData} />
     </div>
   );

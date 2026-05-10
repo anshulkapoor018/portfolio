@@ -6,14 +6,28 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --portfolio-bg: #f6f8fb;
+  --portfolio-surface: #ffffff;
+  --portfolio-text: #111827;
+  --portfolio-muted: #4b5563;
+  --portfolio-subtle: #6b7280;
+  --portfolio-line: #d1d5db;
+  --portfolio-accent: #f04a13;
+  --portfolio-logo-bg: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  --portfolio-bg: #111827;
+  --portfolio-surface: #172033;
+  --portfolio-text: #e5e7eb;
+  --portfolio-muted: #9ca3af;
+  --portfolio-subtle: #6b7280;
+  --portfolio-line: #d1d5db;
+  --portfolio-accent: #ff5a1f;
+  --portfolio-logo-bg: #ffffff;
 }
 
 body {
@@ -26,6 +40,56 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+@layer components {
+  .portfolio-page {
+    background: var(--portfolio-bg);
+    color: var(--portfolio-text);
+  }
+
+  .portfolio-section {
+    background: var(--portfolio-bg);
+    color: var(--portfolio-text);
+  }
+
+  .portfolio-container {
+    @apply container max-w-5xl px-4 py-12 mx-auto;
+  }
+
+  .portfolio-section-title {
+    @apply text-3xl font-semibold;
+    color: var(--portfolio-text);
+  }
+
+  .portfolio-section-kicker::before {
+    background: var(--portfolio-accent);
+    content: "";
+  }
+
+  .portfolio-muted {
+    color: var(--portfolio-muted);
+  }
+
+  .portfolio-subtle {
+    color: var(--portfolio-subtle);
+  }
+
+  .portfolio-timeline {
+    --timeline-line: var(--portfolio-line);
+  }
+
+  .portfolio-timeline::before {
+    background: var(--timeline-line);
+  }
+
+  .portfolio-timeline-item::before {
+    background: var(--timeline-line);
+  }
+
+  .portfolio-logo-frame {
+    background: var(--portfolio-logo-bg);
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -34,6 +98,6 @@ body {
     @apply h-px bg-no-repeat bg-contain relative;
     padding: 0;
     border: 0;
-    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image: linear-gradient(to right, transparent, var(--portfolio-line), transparent);
   }
 }
