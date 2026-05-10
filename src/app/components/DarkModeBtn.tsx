@@ -16,25 +16,24 @@ const DarkModeBtn = () => {
 	}
 
 	const currentTheme = theme === "system" ? systemTheme : theme
+	const isDark = currentTheme === "dark"
 
 	return (
-		<div>
-			{currentTheme === "dark" ? (
-				<SunIcon
-					className="h-6 w-6 cursor-pointer text-yellow-400"
-					onClick={() => {
-						setTheme("light")
-					}}
-				/>
+		<button
+			type="button"
+			className="portfolio-theme-toggle"
+			aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+			aria-pressed={isDark}
+			onClick={() => {
+				setTheme(isDark ? "light" : "dark")
+			}}
+		>
+			{isDark ? (
+				<SunIcon className="h-6 w-6 text-yellow-400" aria-hidden="true" />
 			) : (
-				<MoonIcon
-					className="h-6 w-6 cursor-pointer text-slate-700"
-					onClick={() => {
-						setTheme("dark")
-					}}
-				/>
+				<MoonIcon className="h-6 w-6 text-slate-700" aria-hidden="true" />
 			)}
-		</div>
+		</button>
 	)
 }
 export default DarkModeBtn

@@ -22,7 +22,7 @@ const EducationTimeline: React.FC<EducationTimelineProps> = ({ educationData }) 
                                             href={education.collegeUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-xl font-semibold tracking-wide hover:underline"
+                                            className="portfolio-link text-xl font-semibold tracking-wide hover:underline"
                                         >
                                             {education.college}
                                         </a>

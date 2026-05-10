@@ -46,22 +46,22 @@ const Header = () => {
 
               <div className="mt-6 flex justify-center gap-4 sm:justify-start">
                 <Link legacyBehavior href="mailto:anshulkapoor018@gmail.com" passHref>
-                  <a className="portfolio-muted hover:opacity-80" aria-label="Email Anshul Kapoor">
+                  <a className="portfolio-icon-link" aria-label="Email Anshul Kapoor">
                     <FontAwesomeIcon icon={faEnvelope} size="2x" />
                   </a>
                 </Link>
                 <Link legacyBehavior href="https://github.com/anshulkapoor018" passHref>
-                  <a className="portfolio-muted hover:opacity-80" aria-label="GitHub profile">
+                  <a className="portfolio-icon-link" aria-label="GitHub profile">
                     <FontAwesomeIcon icon={faGithub} size="2x" />
                   </a>
                 </Link>
                 <Link legacyBehavior href="https://linkedin.com/in/anshulkapoor018" passHref>
-                  <a className="portfolio-muted hover:opacity-80" aria-label="LinkedIn profile">
+                  <a className="portfolio-icon-link" aria-label="LinkedIn profile">
                     <FontAwesomeIcon icon={faLinkedin} size="2x" />
                   </a>
                 </Link>
                 <Link legacyBehavior href="tel:2018397699" passHref>
-                  <a className="portfolio-muted hover:opacity-80" aria-label="Call Anshul Kapoor">
+                  <a className="portfolio-icon-link" aria-label="Call Anshul Kapoor">
                     <FontAwesomeIcon icon={faSquarePhoneFlip} size="2x" />
                   </a>
                 </Link>

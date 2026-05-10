@@ -101,6 +101,23 @@ body {
     border-color: var(--portfolio-line);
     color: var(--portfolio-text);
   }
+
+  .portfolio-link {
+    @apply rounded-sm transition-opacity hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4;
+    outline-color: var(--portfolio-accent);
+  }
+
+  .portfolio-icon-link {
+    @apply inline-flex h-10 w-10 items-center justify-center rounded-lg transition-opacity hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4;
+    color: var(--portfolio-muted);
+    outline-color: var(--portfolio-accent);
+  }
+
+  .portfolio-theme-toggle {
+    @apply inline-flex h-10 w-10 items-center justify-center rounded-lg transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4;
+    color: var(--portfolio-text);
+    outline-color: var(--portfolio-accent);
+  }
 }
 
 @layer utilities {

@@ -36,7 +36,7 @@ const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ experienceData 
                                 <div className="min-w-0 flex-1">
                                   <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
                                     <div>
-                                      <a href={experience.companyUrl} target="_blank" rel="noopener noreferrer" className="text-2xl font-bold tracking-normal hover:underline">
+                                      <a href={experience.companyUrl} target="_blank" rel="noopener noreferrer" className="portfolio-link text-2xl font-bold tracking-normal hover:underline">
                                         {experience.company}
                                       </a>
                                       <h4 className="font-semibold tracking-wide">{experience.position}</h4>
@@ -86,7 +86,7 @@ const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ experienceData 
                                   <div className="flex flex-col gap-3">
                                     <LogoFrame src={experience.logo} alt={`${experience.company} logo`} size="sm" />
                                     <div>
-                                      <a href={experience.companyUrl} target="_blank" rel="noopener noreferrer" className="font-bold hover:underline">
+                                      <a href={experience.companyUrl} target="_blank" rel="noopener noreferrer" className="portfolio-link font-bold hover:underline">
                                         {experience.company}
                                       </a>
                                       <p className="portfolio-muted text-sm font-semibold">{experience.position}</p>
