@@ -6,6 +6,8 @@ export interface Experience {
     company: string;
     companyUrl: string;
     experienceDetails: string;
+    featured?: boolean;
+    tags?: string[];
   }
   
   export interface ExperienceTimelineProps {

@@ -8,13 +8,11 @@ export const experienceData: Experience[] = [
       position: 'Software Engineer II',
       company: 'BILL',
       companyUrl: 'https://www.linkedin.com/company/bill-com/',
-      experienceDetails: `- Led modernization initiatives across BILL's Accounts Receivable platform, transforming legacy invoicing and payment workflows into scalable microfrontend-based experiences for a platform serving hundreds of thousands of SMBs.
-- Delivered customer-facing capabilities including Bulk Mark as Paid, Recurring Invoices, Scheduling Invoices, Payment Links, and invoice customization workflows to improve large-scale invoicing operations.
-- Accelerated engineering velocity through AI-assisted development workflows and prompt-engineering techniques for modernizing large frontend surfaces with high implementation accuracy.
-- Improved Angular and React microfrontend architecture by optimizing bundle size, reducing redundant API traffic, and improving application performance and maintainability.
-- Designed and integrated GraphQL-driven frontend systems within a federated architecture, improving data-fetch efficiency and frontend-backend interoperability.
-- Standardized scalable automation patterns, increased frontend test coverage, and reduced QA maintenance overhead across critical workflows.
-- Rationalized LaunchDarkly feature flags and legacy frontend patterns to reduce technical debt and simplify long-term platform maintainability.`
+      featured: true,
+      tags: ['AR Platform', 'Angular + React', 'GraphQL'],
+      experienceDetails: `- Modernized invoicing and payment workflows into scalable microfrontend experiences across BILL's Accounts Receivable platform.
+- Delivered key customer-facing AR workflows including Bulk Mark as Paid, Recurring Invoices, Payment Links, and invoice customization.
+- Improved frontend performance, test coverage, feature-flag hygiene, and developer velocity across critical workflows.`
     },
     {
       dateStart: "Feb 2023",
@@ -23,11 +21,11 @@ export const experienceData: Experience[] = [
       position: 'Software Engineer III',
       company: 'BillGo',
       companyUrl: 'https://www.linkedin.com/company/billgopayments/',
-      experienceDetails: `- Led architecture and development of reusable SDK and UI platform components, improving developer productivity and reducing duplication across fintech product integrations.
-- Delivered scalable client-facing fintech solutions supporting high-volume payment processing workflows handling billions in annual transaction volume.
-- Enhanced SDK architecture to streamline third-party integrations, reducing downstream product development effort by approximately 90% across multiple implementation workflows.
-- Drove adoption of modular architecture and scalable testing strategies to improve cross-platform reliability, maintainability, and long-term system scalability.
-- Led modernization, refactoring, and platform upgrade initiatives across shared frontend infrastructure, reducing technical debt and improving engineering maintainability.`
+      featured: true,
+      tags: ['SDK Platform', 'Fintech', 'Developer Experience'],
+      experienceDetails: `- Led reusable SDK and UI platform components for high-volume fintech payment workflows.
+- Reduced downstream integration effort by approximately 90% across multiple implementation paths.
+- Modernized shared frontend infrastructure through refactoring, platform upgrades, and scalable testing strategies.`
     },
     {
       dateStart: "Jul 2021",
@@ -36,13 +34,11 @@ export const experienceData: Experience[] = [
       position: 'Software Engineer II',
       company: 'BillGo',
       companyUrl: 'https://www.linkedin.com/company/billgopayments/',
-      experienceDetails: `- Architected a cross-platform SDK consisting of headless and UI libraries, enabling scalable integration patterns across mobile fintech applications.
-- Delivered native iOS and Android applications to validate SDK architecture, platform capabilities, and production readiness.
-- Improved engineering workflows by implementing GitHub Actions pipelines and automating testing, build, and deployment processes.
-- Reduced end-to-end application testing time by 50% through automated testing infrastructure using the Detox framework.
-- Built internal React Native tooling applications to simulate client environments and accelerate backend API validation workflows.
-- Developed scalable data synchronization and caching capabilities within the UI SDK, enabling new offline and real-time product use cases.
-- Designed a modular theming architecture using CSS variables and reusable design primitives to improve customization, branding flexibility, and frontend scalability.`
+      featured: true,
+      tags: ['React Native', 'Automation', 'Mobile SDK'],
+      experienceDetails: `- Architected cross-platform headless and UI SDK libraries for scalable mobile fintech integrations.
+- Built native iOS, Android, and internal React Native tooling to validate platform capabilities and API workflows.
+- Reduced end-to-end testing time by 50% with Detox automation and GitHub Actions pipelines.`
     },
     {
       dateStart: "Jun 2020",
@@ -51,6 +47,7 @@ export const experienceData: Experience[] = [
       position: 'Software Engineer Intern',
       company: 'IDT Corporation',
       companyUrl: 'https://www.linkedin.com/company/idt/',
+      tags: ['AWS Lambda', 'iOS Widgets', 'Terraform'],
       experienceDetails: `- Developed a suite of iOS 14 widgets for the company's flagship application, enhancing user experience and extending platform functionality across Apple ecosystems.
 - Built internal Slack-based operational tooling using AWS Lambda to improve visibility and response times for production outage events.
 - Developed serverless monitoring workflows integrating AWS Lambda, API Gateway, and Jira Webhooks to automate issue tracking and incident management processes.
@@ -64,6 +61,7 @@ export const experienceData: Experience[] = [
       position: 'Software Engineer',
       company: 'VisionIAS',
       companyUrl: 'https://www.linkedin.com/company/visionias/',
+      tags: ['AWS S3', 'Secure APIs', 'Video Streaming'],
       experienceDetails: `- Built scalable AWS S3-based content delivery infrastructure enabling seamless access to paid and free educational media within the platform.
 - Developed secure API frameworks using AES and RSA encryption, reducing duplicated implementation patterns and improving maintainability across backend modules.
 - Designed adaptive video streaming capabilities with network-aware quality optimization, increasing daily active user engagement by approximately 20%.
@@ -77,6 +75,7 @@ export const experienceData: Experience[] = [
       position: 'Application Engineer',
       company: 'Rivigo',
       companyUrl: 'https://www.linkedin.com/company/rivigo/',
+      tags: ['JIRA Analytics', 'Debugging', 'UX Recommendations'],
       experienceDetails: `- Improved issue investigation workflows by leveraging JIRA analytics and production debugging insights to identify recurring technical patterns.
 - Reproduced and analyzed production issues within testing environments, improving visibility into user-impacting behaviors and increasing diagnostic efficiency.
 - Evaluated UX/UI problem areas contributing to high-frequency support issues and provided data-driven recommendations to improve product usability.`

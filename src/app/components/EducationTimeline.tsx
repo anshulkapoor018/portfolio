@@ -16,7 +16,9 @@ const EducationTimeline: React.FC<EducationTimelineProps> = ({ educationData }) 
                         {educationData.map((education, index) => (
                         <div key={index} className="portfolio-timeline-item flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1]">
                             <div className='flex'>
-                                <LogoFrame src={education.logo} alt={`${education.college} logo`} />
+                                <div className="mr-4">
+                                    <LogoFrame src={education.logo} alt={`${education.college} logo`} />
+                                </div>
                                     <div>
                                         <a href={education.collegeUrl} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold tracking-wide hover:underline">
                                             {education.college}
