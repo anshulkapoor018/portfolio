@@ -16,8 +16,10 @@ const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ experienceData 
                         {experienceData.map((experience, index) => (
                             <div key={index} className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-gray-300 before:dark:bg-gray-300">
                                 <div className='flex'>
-                                    <div className="flex-none mr-4 overflow-hidden rounded-xl" style={{ position: 'relative', width: '5rem', height: '5rem' }}>
-                                        <Image src={experience.logo} alt="Company Logo" fill sizes="80px" style={{ objectFit: 'cover' }} />
+                                    <div className="flex-none w-20 h-20 mr-4 overflow-hidden rounded-xl bg-white p-2 shadow-sm">
+                                        <div className="relative h-full w-full">
+                                            <Image src={experience.logo} alt="Company Logo" fill sizes="64px" className="object-contain" />
+                                        </div>
                                     </div>
                                     <div>
                                         <a href={experience.companyUrl} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold tracking-wide hover:underline">
