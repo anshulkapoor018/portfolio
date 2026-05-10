@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitter, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faSquarePhoneFlip } from '@fortawesome/free-solid-svg-icons';
 import { useTheme } from 'next-themes';
 config.autoAddCss = false;
@@ -28,20 +28,17 @@ const Header = () => {
               className="rounded-full"
             />
           </div>
-        </div>
+          </div>
           <div className="text-center sm:text-left sm:pl-6">
             <h1 className="text-4xl font-semibold text-gray-900 dark:text-gray-400">Anshul Kapoor</h1>
-            <p className="text-gray-600">Spinning up pixel-perfect layouts and breathing life into UI designs</p>
+            <p className="max-w-2xl text-gray-600">
+              Software Engineer focused on product and platform engineering, frontend architecture,
+              microfrontend systems, GraphQL-driven applications, and AI-assisted engineering workflows.
+            </p>
             <div className="flex justify-center sm:justify-start space-x-4 mt-2">
-              {/* Icons */}
-              {/* <Link legacyBehavior href="mailto:anshulkapoor018@gmail.com" passHref>
+              <Link legacyBehavior href="mailto:anshulkapoor018@gmail.com" passHref>
                 <a className="text-gray-900 hover:text-black">
                   <FontAwesomeIcon color={iconColor} icon={faEnvelope} size="2x" />
-                </a>
-              </Link> */}
-              <Link legacyBehavior href="https://twitter.com/anshulkapoor018" passHref>
-                <a className="text-blue-500 hover:text-blue-600">
-                  <FontAwesomeIcon color={iconColor} icon={faTwitter} size="2x" />
                 </a>
               </Link>
               <Link legacyBehavior href="https://github.com/anshulkapoor018" passHref>

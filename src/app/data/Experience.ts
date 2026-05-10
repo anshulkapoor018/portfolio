@@ -2,13 +2,32 @@ import { Experience } from "../interfaces/Experience";
 
 export const experienceData: Experience[] = [
     {
+      dateStart: "Jun 2024",
+      dateEnd: "Present",
+      logo: '/bill-logo.png',
+      position: 'Software Engineer II',
+      company: 'BILL',
+      companyUrl: 'https://www.linkedin.com/company/bill-com/',
+      experienceDetails: `- Led modernization initiatives across BILL's Accounts Receivable platform, transforming legacy invoicing and payment workflows into scalable microfrontend-based experiences for a platform serving hundreds of thousands of SMBs.
+- Delivered customer-facing capabilities including Bulk Mark as Paid, Recurring Invoices, Scheduling Invoices, Payment Links, and invoice customization workflows to improve large-scale invoicing operations.
+- Accelerated engineering velocity through AI-assisted development workflows and prompt-engineering techniques for modernizing large frontend surfaces with high implementation accuracy.
+- Improved Angular and React microfrontend architecture by optimizing bundle size, reducing redundant API traffic, and improving application performance and maintainability.
+- Designed and integrated GraphQL-driven frontend systems within a federated architecture, improving data-fetch efficiency and frontend-backend interoperability.
+- Standardized scalable automation patterns, increased frontend test coverage, and reduced QA maintenance overhead across critical workflows.
+- Rationalized LaunchDarkly feature flags and legacy frontend patterns to reduce technical debt and simplify long-term platform maintainability.`
+    },
+    {
       dateStart: "Feb 2023",
-      dateEnd: "Feb 2024",
+      dateEnd: "Mar 2024",
       logo: '/Billgo.jpg',
       position: 'Software Engineer III',
       company: 'BillGo',
       companyUrl: 'https://www.linkedin.com/company/billgopayments/',
-      experienceDetails: `- Spearheaded the design, implementation, and maintenance of reusable UI components in SDK, enhancing frontend development efficiency and slashing code duplication significantly.\n - Led the delivery of a pivotal client-facing fintech product, catalyzing cross-functional team collaboration. Instrumental in processing hundreds of thousands of payments, the product managed over a billion dollars in transactions yearly, markedly enhancing the company's fintech industry standing.\n- Strategically enhanced the SDK to enable more efficient integration with third-party systems, resulting in a revolutionary 90% reduction in development time for the company's products.\n- Tackled compatibility and platform-specific challenges by adopting a modular architecture and rigorous testing, ensuring robust and scalable solutions.\n- Championed code refactoring, migrations, and upgrades, safeguarding codebase maintainability and scalability.`
+      experienceDetails: `- Led architecture and development of reusable SDK and UI platform components, improving developer productivity and reducing duplication across fintech product integrations.
+- Delivered scalable client-facing fintech solutions supporting high-volume payment processing workflows handling billions in annual transaction volume.
+- Enhanced SDK architecture to streamline third-party integrations, reducing downstream product development effort by approximately 90% across multiple implementation workflows.
+- Drove adoption of modular architecture and scalable testing strategies to improve cross-platform reliability, maintainability, and long-term system scalability.
+- Led modernization, refactoring, and platform upgrade initiatives across shared frontend infrastructure, reducing technical debt and improving engineering maintainability.`
     },
     {
       dateStart: "Jul 2021",
@@ -17,7 +36,13 @@ export const experienceData: Experience[] = [
       position: 'Software Engineer II',
       company: 'BillGo',
       companyUrl: 'https://www.linkedin.com/company/billgopayments/',
-      experienceDetails: `- Innovated a multiplatform SDK encompassing a headless and a UI Library, setting a new standard in solution design.\n- Successfully delivered native iOS and Android applications, showcasing the SDK's proof of concept and technical viability.\n- Streamlined project workflows by implementing GitHub Actions, automating testing, building, and deployment, thereby liberating developers from manual tasks.\n- Halved application-flow testing time by automating end-to-end testing for the SDK with the Detox framework.\n- Deployed an internal React Native application to enhance backend API feature testing, accurately simulating client environments.\n- Pioneered data syncing and caching features using SyncTable in the UI SDK, unlocking new use cases and applications.\n- Developed a customizable theming system for the SDK application, employing CSS variables and modular native-base, enhancing UI adaptability, branding, and codebase scalability.`
+      experienceDetails: `- Architected a cross-platform SDK consisting of headless and UI libraries, enabling scalable integration patterns across mobile fintech applications.
+- Delivered native iOS and Android applications to validate SDK architecture, platform capabilities, and production readiness.
+- Improved engineering workflows by implementing GitHub Actions pipelines and automating testing, build, and deployment processes.
+- Reduced end-to-end application testing time by 50% through automated testing infrastructure using the Detox framework.
+- Built internal React Native tooling applications to simulate client environments and accelerate backend API validation workflows.
+- Developed scalable data synchronization and caching capabilities within the UI SDK, enabling new offline and real-time product use cases.
+- Designed a modular theming architecture using CSS variables and reusable design primitives to improve customization, branding flexibility, and frontend scalability.`
     },
     {
       dateStart: "Jun 2020",
@@ -26,11 +51,11 @@ export const experienceData: Experience[] = [
       position: 'Software Engineer Intern',
       company: 'IDT Corporation',
       companyUrl: 'https://www.linkedin.com/company/idt/',
-      experienceDetails: `- Spearheaded the development of a suite of iOS14 widgets for the company's flagship product, leveraging a fully agile environment to enhance user interface and functionality.
-      - Conceptualized and executed a Slack Workspace Application for server outage notifications, employing AWS Lambda for event processing, which significantly enhanced the operations team's visibility and responsiveness to production events.
-      - Developed a serverless application integrating AWS Lambda, AWS API Gateway, and Jira Webhooks to monitor critical server outage events, ensuring prompt issue tracking and resolution.
-      - Automated regression testing for a Web Service using NUnit Testing Framework; reduced time for Testing to almost 20%.
-      - Engineered an autoscaling feature for ECS services using Terraform for the DevOps team, achieving a 10% reduction in service costs through enhanced resource management.`
+      experienceDetails: `- Developed a suite of iOS 14 widgets for the company's flagship application, enhancing user experience and extending platform functionality across Apple ecosystems.
+- Built internal Slack-based operational tooling using AWS Lambda to improve visibility and response times for production outage events.
+- Developed serverless monitoring workflows integrating AWS Lambda, API Gateway, and Jira Webhooks to automate issue tracking and incident management processes.
+- Automated regression testing for critical web services using the NUnit testing framework, reducing manual testing effort and improving release efficiency.
+- Implemented autoscaling infrastructure for ECS services using Terraform, improving resource utilization and reducing operational costs by approximately 10%.`
     },
     {
       dateStart: "Dec 2017",
@@ -39,11 +64,11 @@ export const experienceData: Experience[] = [
       position: 'Software Engineer',
       company: 'VisionIAS',
       companyUrl: 'https://www.linkedin.com/company/visionias/',
-      experienceDetails: `- Created storage framework using AWS Service - S3 which helped app users download paid and free content seamlessly.
-      - Accomplished API framework that helped protect data while making API calls using AES and RSA Encryption; eliminated 10% of existing codebase from every module and ~ 20% of code reduction overall.
-      - Devised video streaming feature that helped users watch live/old videos; optimized video quality by network speed thereby increasing number of daily active users by 20%.
-      - Delivered Live Test Series Feature for users to enroll and give series of tests followed by detailed analysis.
-      - Mentored 2 interns and 1 Full-Time Employee; helped with company's culture, company specific tools, and processes.`
+      experienceDetails: `- Built scalable AWS S3-based content delivery infrastructure enabling seamless access to paid and free educational media within the platform.
+- Developed secure API frameworks using AES and RSA encryption, reducing duplicated implementation patterns and improving maintainability across backend modules.
+- Designed adaptive video streaming capabilities with network-aware quality optimization, increasing daily active user engagement by approximately 20%.
+- Delivered large-scale live test and assessment features supporting real-time participation, performance analysis, and student engagement workflows.
+- Mentored interns and junior engineers on engineering practices, internal tooling, and development workflows.`
     },
     {
       dateStart: "Jun 2017",
@@ -52,6 +77,8 @@ export const experienceData: Experience[] = [
       position: 'Application Engineer',
       company: 'Rivigo',
       companyUrl: 'https://www.linkedin.com/company/rivigo/',
-      experienceDetails: `- Re-engineered the process of handling Technical Issues by using Data insights from Issue Tracking Software - JIRA which helped the team focus more on practical issues.\n- Designed a method of root cause analysis by replicating the issues on the testing server which helped in understanding the user behavior more efficiently.\n- Suggested design changes(UX/UI) to reduce high ranking issues in the product originating from user end due to the cluster design of the product.`
+      experienceDetails: `- Improved issue investigation workflows by leveraging JIRA analytics and production debugging insights to identify recurring technical patterns.
+- Reproduced and analyzed production issues within testing environments, improving visibility into user-impacting behaviors and increasing diagnostic efficiency.
+- Evaluated UX/UI problem areas contributing to high-frequency support issues and provided data-driven recommendations to improve product usability.`
     },
   ];

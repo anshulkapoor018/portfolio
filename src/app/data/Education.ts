@@ -8,7 +8,8 @@ export const educationData: Education[] = [
       location: 'Hoboken, New Jersey, USA',
       college: 'Stevens Institute of Technology',
       collegeUrl: 'https://www.stevens.edu/',
-      experienceDetails: `As a distinguished graduate with a Master of Science in Software Engineering, where I earned the honor of Summa Cum Laude, my academic journey has been marked by a profound engagement with the intricacies of Python, Data Structures, and Algorithms. This rigor was matched by my deep exploration into Mobile Programming, Natural Language Processing, and Web Development, culminating in a robust understanding of Software Architecture. Each course was not just a credit earned but a piece of the puzzle in my comprehensive software engineering expertise.`
+      experienceDetails: `- Master of Science in Software Engineering with a 3.969 / 4.0 GPA.
+- Coursework included Software Architecture, Agile Development, Software Requirements Analysis, Python Programming, Web Programming, Software Testing, and Natural Language Processing.`
     },
     {
       dateStart: "Aug 2013",
@@ -17,6 +18,8 @@ export const educationData: Education[] = [
       location: 'Noida, Uttar Pradesh, India',
       college: 'Jaypee Institute of Information Technology',
       collegeUrl: 'https://www.jiit.ac.in/',
-      experienceDetails: `Embarking on my tech adventure, I donned my explorer's hat for a Bachelor of Technology in Information Technology. It was here, amid the binary and bytes, that I first shook hands with programming—and we've been best friends ever since. Over those four action-packed years, I cooked up a buffet of projects, each a flavor of my growing skill set. Curious to see my digital kitchen? Head over to my GitHub where the proof of the programming is in the repository!`
+      experienceDetails: `- Bachelor of Technology in Information Technology.
+- Coursework included Data Structures and Algorithms, Operating Systems, Computer Vision, and Computer Networks.
+- Certifications and training included Swift, Web Development, and Algorithms in C++.`
     },
   ];
