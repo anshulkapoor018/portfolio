@@ -15,25 +15,21 @@ const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ experienceData 
   return (
     <section className="portfolio-section">
         <div className="portfolio-container">
-            <div className="grid gap-4 mx-4 sm:grid-cols-12">
+            <div className="grid gap-8 sm:grid-cols-12">
                 <div className="col-span-12 sm:col-span-3">
-                    <div className="portfolio-section-kicker text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0">
+                    <div className="portfolio-section-kicker mb-8 text-center before:mx-auto before:mb-5 before:block before:h-3 before:w-24 before:rounded-md sm:sticky sm:top-8 sm:mb-14 sm:text-left sm:before:mx-0">
                         <h3 className="portfolio-section-title">Experience</h3>
                         <p className="portfolio-muted mt-4 text-sm leading-6">
                           Selected platform work, condensed for fast scanning.
                         </p>
                     </div>
                 </div>
-                <div className="relative col-span-12 px-4 sm:col-span-9">
+                <div className="relative col-span-12 sm:col-span-9">
                     <div className="space-y-6">
                         {featuredExperience.map((experience, index) => (
                             <article
                               key={`${experience.company}-${experience.position}-${index}`}
-                              className="rounded-2xl border p-6 shadow-sm"
-                              style={{
-                                background: 'var(--portfolio-surface)',
-                                borderColor: 'var(--portfolio-line)',
-                              }}
+                              className="portfolio-card p-5 sm:p-6"
                             >
                               <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
                                 <LogoFrame src={experience.logo} alt={`${experience.company} logo`} />
@@ -55,12 +51,7 @@ const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ experienceData 
                                       {experience.tags.map((tag) => (
                                         <span
                                           key={tag}
-                                          className="rounded-full border px-3 py-1.5 text-xs font-semibold"
-                                          style={{
-                                            background: 'var(--portfolio-bg)',
-                                            borderColor: 'var(--portfolio-line)',
-                                            color: 'var(--portfolio-text)',
-                                          }}
+                                          className="portfolio-chip px-3 py-1.5 text-xs"
                                         >
                                           {tag}
                                         </span>
@@ -90,11 +81,7 @@ const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ experienceData 
                               return (
                                 <article
                                   key={`${experience.company}-${experience.position}`}
-                                  className="rounded-xl border p-4"
-                                  style={{
-                                    background: 'var(--portfolio-surface)',
-                                    borderColor: 'var(--portfolio-line)',
-                                  }}
+                                  className="portfolio-card p-4"
                                 >
                                   <div className="flex flex-col gap-3">
                                     <LogoFrame src={experience.logo} alt={`${experience.company} logo`} size="sm" />

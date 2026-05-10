@@ -52,7 +52,7 @@ body {
   }
 
   .portfolio-container {
-    @apply container max-w-5xl px-4 py-12 mx-auto;
+    @apply container max-w-5xl px-5 py-10 mx-auto sm:py-12;
   }
 
   .portfolio-section-title {
@@ -87,6 +87,19 @@ body {
 
   .portfolio-logo-frame {
     background: var(--portfolio-logo-bg);
+  }
+
+  .portfolio-card {
+    @apply rounded-lg border shadow-sm;
+    background: var(--portfolio-surface);
+    border-color: var(--portfolio-line);
+  }
+
+  .portfolio-chip {
+    @apply rounded-full border font-semibold;
+    background: var(--portfolio-bg);
+    border-color: var(--portfolio-line);
+    color: var(--portfolio-text);
   }
 }
 

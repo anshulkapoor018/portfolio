@@ -18,7 +18,7 @@ const expertise = [
 
 const Header = () => {
     return (
-      <header className="portfolio-section px-4 pb-10 pt-6 sm:pb-14">
+      <header className="portfolio-section px-5 pb-10 pt-6 sm:pb-14">
         <div className="container max-w-5xl mx-auto">
           <div className="grid items-center gap-8 sm:grid-cols-[minmax(0,1fr)_220px]">
             <div className="order-2 text-center sm:order-1 sm:text-left">
@@ -37,12 +37,7 @@ const Header = () => {
                 {expertise.map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border px-3 py-2 text-sm font-medium"
-                    style={{
-                      background: 'var(--portfolio-surface)',
-                      borderColor: 'var(--portfolio-line)',
-                      color: 'var(--portfolio-text)',
-                    }}
+                    className="portfolio-chip px-3 py-2 text-sm"
                   >
                     {item}
                   </span>
@@ -85,11 +80,7 @@ const Header = () => {
                 />
               </div>
               <div
-                className="hidden w-full rounded-xl border p-4 sm:block"
-                style={{
-                  background: 'var(--portfolio-surface)',
-                  borderColor: 'var(--portfolio-line)',
-                }}
+                className="portfolio-card hidden w-full p-4 sm:block"
               >
                 <p className="portfolio-subtle text-xs font-semibold uppercase tracking-wide">Current focus</p>
                 <p className="mt-1 text-base font-semibold" style={{ color: 'var(--portfolio-text)' }}>

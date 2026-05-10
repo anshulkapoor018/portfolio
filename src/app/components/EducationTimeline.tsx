@@ -5,35 +5,46 @@ const EducationTimeline: React.FC<EducationTimelineProps> = ({ educationData }) 
   return (
     <section className="portfolio-section">
         <div className="portfolio-container">
-            <div className="grid gap-4 mx-4 sm:grid-cols-12">
+            <div className="grid gap-8 sm:grid-cols-12">
                 <div className="col-span-12 sm:col-span-3">
-                    <div className="portfolio-section-kicker text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 ">
+                    <div className="portfolio-section-kicker mb-8 text-center before:mx-auto before:mb-5 before:block before:h-3 before:w-24 before:rounded-md sm:sticky sm:top-8 sm:mb-14 sm:text-left sm:before:mx-0">
                         <h3 className="portfolio-section-title">Education</h3>
                     </div>
                 </div>
-                <div className="relative col-span-12 px-4 space-y-6 sm:col-span-9">
-                <div className="portfolio-timeline col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3">
-                        {educationData.map((education, index) => (
-                        <div key={index} className="portfolio-timeline-item flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1]">
-                            <div className='flex'>
-                                <div className="mr-4">
+                <div className="relative col-span-12 sm:col-span-9">
+                    <div className="space-y-4">
+                        {educationData.map((education) => (
+                            <article key={education.college} className="portfolio-card p-5 sm:p-6">
+                                <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
                                     <LogoFrame src={education.logo} alt={`${education.college} logo`} />
-                                </div>
-                                    <div>
-                                        <a href={education.collegeUrl} target="_blank" rel="noopener noreferrer" className="text-xl font-semibold tracking-wide hover:underline">
+                                    <div className="min-w-0 flex-1">
+                                        <a
+                                            href={education.collegeUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-xl font-semibold tracking-wide hover:underline"
+                                        >
                                             {education.college}
                                         </a>
-                                        <h4 className="text-s font-semibold tracking-wide">{education.location}</h4>
-                                        <time className="portfolio-subtle text-xs tracking-wide uppercase">{education.dateStart} - {education.dateEnd}</time>
+                                        <h4 className="text-sm font-semibold tracking-wide">{education.location}</h4>
+                                        <time className="portfolio-subtle text-xs tracking-wide uppercase">
+                                            {education.dateStart} - {education.dateEnd}
+                                        </time>
+                                        <ul className="portfolio-muted mt-4 space-y-3">
+                                            {education.experienceDetails.split('\n').map((detail, index) => {
+                                                const trimmedDetail = detail.trim().startsWith('-') ? detail.trim().substring(1).trim() : detail.trim();
+
+                                                return (
+                                                    <li key={index} className="flex gap-3 leading-7">
+                                                        <span className="mt-3 h-1.5 w-1.5 flex-none rounded-full" style={{ background: 'var(--portfolio-accent)' }} />
+                                                        <span>{trimmedDetail}</span>
+                                                    </li>
+                                                );
+                                            })}
+                                        </ul>
                                     </div>
                                 </div>
-                                <ul className="mt-3 list-disc list-inside">
-                                {education.experienceDetails.split('\n').map((detail, index) => {
-                                    const trimmedDetail = detail.trim().startsWith('-') ? detail.trim().substring(1).trim() : detail.trim();
-                                    return <li key={index}>{trimmedDetail}</li>;
-                                })}
-                                </ul>
-                            </div>
+                            </article>
                         ))}
                     </div>
                 </div>
