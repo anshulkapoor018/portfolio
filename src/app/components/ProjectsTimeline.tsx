@@ -1,6 +1,15 @@
 import { ProjectsTimelineProps } from '../interfaces/Project';
 
 const ProjectsTimeline: React.FC<ProjectsTimelineProps> = ({ projectsData }) => {
+  const featuredProjects = projectsData.filter((project) => project.featured);
+
+  const getDetails = (details: string) => (
+    details
+      .split('\n')
+      .map((detail) => detail.trim().startsWith('-') ? detail.trim().substring(1).trim() : detail.trim())
+      .filter(Boolean)
+  );
+
   return (
     <section className="portfolio-section">
       <div className="portfolio-container">
@@ -8,22 +17,43 @@ const ProjectsTimeline: React.FC<ProjectsTimelineProps> = ({ projectsData }) => 
           <div className="col-span-12 sm:col-span-3">
             <div className="portfolio-section-kicker text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0">
               <h3 className="portfolio-section-title">Projects</h3>
+              <p className="portfolio-muted mt-4 text-sm leading-6">
+                A few representative builds from earlier work.
+              </p>
             </div>
           </div>
-          <div className="relative col-span-12 px-4 space-y-6 sm:col-span-9">
-            <div className="portfolio-timeline col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3">
-              {projectsData.map((project, index) => (
-                <div key={index} className="portfolio-timeline-item flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1]">
-                  <h4 className="text-xl font-semibold tracking-wide">{project.name}</h4>
-                  <p className="text-sm font-semibold tracking-wide">{project.stack}</p>
-                  <time className="portfolio-subtle text-xs tracking-wide uppercase">{project.dateStart} - {project.dateEnd}</time>
-                  <ul className="mt-3 list-disc list-inside">
-                    {project.projectDetails.split('\n').map((detail, index) => {
-                      const trimmedDetail = detail.trim().startsWith('-') ? detail.trim().substring(1).trim() : detail.trim();
-                      return <li key={index}>{trimmedDetail}</li>;
-                    })}
-                  </ul>
-                </div>
+          <div className="relative col-span-12 px-4 sm:col-span-9">
+            <div className="grid gap-4 md:grid-cols-3">
+              {featuredProjects.map((project) => (
+                <article
+                  key={project.name}
+                  className="rounded-2xl border p-5"
+                  style={{
+                    background: 'var(--portfolio-surface)',
+                    borderColor: 'var(--portfolio-line)',
+                  }}
+                >
+                  <h4 className="text-xl font-bold tracking-normal">{project.name}</h4>
+                  <time className="portfolio-subtle mt-1 block text-xs font-semibold tracking-wide uppercase">
+                    {project.dateStart} - {project.dateEnd}
+                  </time>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {project.stack.map((item) => (
+                      <span
+                        key={item}
+                        className="rounded-full border px-2.5 py-1 text-xs font-semibold"
+                        style={{
+                          background: 'var(--portfolio-bg)',
+                          borderColor: 'var(--portfolio-line)',
+                          color: 'var(--portfolio-text)',
+                        }}
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="portfolio-muted mt-5 text-sm leading-6">{getDetails(project.projectDetails)[0]}</p>
+                </article>
               ))}
             </div>
           </div>

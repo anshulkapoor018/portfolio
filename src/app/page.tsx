@@ -19,7 +19,7 @@ const Home = () => {
       <hr className="divider-gradient" />
       <EducationTimeline educationData={educationData} />
       <hr className="divider-gradient" />
-      <SkillsTimeline skillDetails={skillsData.skillDetails}/>
+      <SkillsTimeline skillGroups={skillsData.skillGroups}/>
       <hr className="divider-gradient" />
       <ProjectsTimeline projectsData={projectsData} />
     </div>

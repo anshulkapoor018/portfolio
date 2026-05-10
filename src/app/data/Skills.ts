@@ -1,11 +1,26 @@
 import { Skills } from "../interfaces/Skills";
 
 export const skillsData: Skills = {
-    skillDetails: `- Languages: TypeScript | JavaScript | Python | Swift | Kotlin
-- Frontend & Mobile: Angular | React | React Native | Redux | Preact | HTML | CSS | Figma
-- Architecture & Platforms: Microfrontends | GraphQL | SDK Architecture | Platform Modernization | Design Systems
-- Cloud & Infrastructure: AWS Lambda | API Gateway | CloudWatch | GitHub Actions
-- Testing & Tooling: Jest | Playwright | Detox | Automation Frameworks | CI/CD Pipelines
-- Backend & Data: Node.js | Express.js | Flask | Django | MongoDB | MySQL | SQLite
-- Observability & Product Engineering: LaunchDarkly | Analytics Instrumentation | Developer Experience | Performance Optimization`
+    skillGroups: [
+        {
+            category: 'Frontend',
+            items: ['Angular', 'React', 'TypeScript', 'React Native', 'Redux', 'Design Systems', 'Figma'],
+        },
+        {
+            category: 'Architecture',
+            items: ['Microfrontends', 'GraphQL', 'SDK Architecture', 'Platform Modernization'],
+        },
+        {
+            category: 'Cloud & Tooling',
+            items: ['AWS Lambda', 'API Gateway', 'CloudWatch', 'GitHub Actions', 'Jest', 'Playwright', 'Detox'],
+        },
+        {
+            category: 'Backend & Data',
+            items: ['Node.js', 'Express.js', 'Flask', 'Django', 'MongoDB', 'MySQL', 'SQLite'],
+        },
+        {
+            category: 'Product Engineering',
+            items: ['LaunchDarkly', 'Analytics Instrumentation', 'Developer Experience', 'Performance Optimization'],
+        },
+    ],
 }

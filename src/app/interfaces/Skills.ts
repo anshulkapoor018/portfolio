@@ -1,3 +1,8 @@
 export interface Skills {
-    skillDetails: string;
+    skillGroups: SkillGroup[];
+}
+
+export interface SkillGroup {
+    category: string;
+    items: string[];
 }
