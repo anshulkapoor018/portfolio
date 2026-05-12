@@ -173,6 +173,14 @@ body {
   .portfolio-resume-action:hover {
     background: var(--portfolio-surface);
   }
+
+  .portfolio-live-badge {
+    @apply inline-flex items-center gap-2 rounded-full border px-2.5 py-1 text-xs font-bold;
+    background: var(--portfolio-bg);
+    border-color: var(--portfolio-line);
+    color: var(--portfolio-text);
+  }
+
 }
 
 @layer utilities {

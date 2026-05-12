@@ -7,6 +7,9 @@ export const projectsData: Project[] = [
     name: "DilSeFoodie",
     stack: ["React.js", "Node.js", "Express.js", "MongoDB"],
     featured: true,
+    role: "Full-stack MERN build",
+    status: "Featured build",
+    accent: "#f04a13",
     projectDetails: "- Built a full-stack MERN application for restaurant discovery and food ordering with authentication, backend APIs, and cloud-hosted MongoDB infrastructure."
   },
   {
@@ -15,6 +18,9 @@ export const projectsData: Project[] = [
     name: "SmackChat",
     stack: ["Swift", "Core Data", "Socket Programming", "Firebase"],
     featured: true,
+    role: "Realtime mobile messaging",
+    status: "Mobile app",
+    accent: "#2563eb",
     projectDetails: "- Developed a real-time chat application with group messaging, live updates, Firebase integration, and socket-based communication workflows."
   },
   {
@@ -23,6 +29,9 @@ export const projectsData: Project[] = [
     name: "Automated Attendance System",
     stack: ["Python", "OpenCV", "Flask"],
     featured: true,
+    role: "Computer vision workflow",
+    status: "Research build",
+    accent: "#16a34a",
     projectDetails: "- Built a computer vision-based attendance platform using Viola-Jones detection and LBPH facial recognition algorithms."
   },
   {
