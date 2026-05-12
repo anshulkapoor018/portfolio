@@ -115,11 +115,11 @@ const CommandPalette = () => {
     },
     {
       id: 'resume',
-      label: 'Prepare Resume Drawer',
-      hint: 'Coming next',
+      label: 'Open Resume Drawer',
+      hint: 'Action',
       keywords: 'resume cv download pdf',
       icon: <ArrowDownTrayIcon className="h-5 w-5" aria-hidden="true" />,
-      run: () => scrollToSection('home'),
+      run: () => window.dispatchEvent(new Event('portfolio:open-resume')),
     },
     {
       id: 'theme',

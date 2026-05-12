@@ -6,6 +6,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faSquarePhoneFlip } from '@fortawesome/free-solid-svg-icons';
+import ResumeDrawer from './ResumeDrawer';
 config.autoAddCss = false;
 
 const expertise = [
@@ -42,6 +43,10 @@ const Header = () => {
                     {item}
                   </span>
                 ))}
+              </div>
+
+              <div className="mt-6 flex justify-center sm:justify-start">
+                <ResumeDrawer />
               </div>
 
               <div className="mt-6 flex justify-center gap-4 sm:justify-start">

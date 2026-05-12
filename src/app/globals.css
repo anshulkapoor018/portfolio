@@ -149,6 +149,30 @@ body {
   .portfolio-command-trigger:hover {
     background: var(--portfolio-surface);
   }
+
+  .portfolio-hero-action {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border px-4 py-2.5 text-sm font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4;
+    background: var(--portfolio-surface);
+    border-color: var(--portfolio-line);
+    color: var(--portfolio-text);
+    outline-color: var(--portfolio-accent);
+  }
+
+  .portfolio-hero-action:hover {
+    background: var(--portfolio-bg);
+  }
+
+  .portfolio-resume-action {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border px-3 py-2.5 text-sm font-bold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4;
+    background: var(--portfolio-bg);
+    border-color: var(--portfolio-line);
+    color: var(--portfolio-text);
+    outline-color: var(--portfolio-accent);
+  }
+
+  .portfolio-resume-action:hover {
+    background: var(--portfolio-surface);
+  }
 }
 
 @layer utilities {
