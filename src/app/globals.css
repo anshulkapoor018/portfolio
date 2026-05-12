@@ -139,6 +139,16 @@ body {
     color: var(--portfolio-text);
     outline-color: var(--portfolio-accent);
   }
+
+  .portfolio-command-trigger {
+    @apply inline-flex h-10 items-center justify-center gap-2 rounded-lg px-2.5 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4;
+    color: var(--portfolio-text);
+    outline-color: var(--portfolio-accent);
+  }
+
+  .portfolio-command-trigger:hover {
+    background: var(--portfolio-surface);
+  }
 }
 
 @layer utilities {

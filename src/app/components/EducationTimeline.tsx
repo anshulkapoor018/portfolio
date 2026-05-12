@@ -3,7 +3,7 @@ import LogoFrame from './LogoFrame';
 
 const EducationTimeline: React.FC<EducationTimelineProps> = ({ educationData }) => {
   return (
-    <section className="portfolio-section">
+    <section id="education" className="portfolio-section">
         <div className="portfolio-container">
             <div className="grid gap-8 sm:grid-cols-12">
                 <div className="col-span-12 sm:col-span-3">

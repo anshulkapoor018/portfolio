@@ -18,7 +18,7 @@ const expertise = [
 
 const Header = () => {
     return (
-      <header className="portfolio-section px-5 pb-10 pt-6 sm:pb-14">
+      <header id="home" className="portfolio-section px-5 pb-10 pt-6 sm:pb-14">
         <div className="container max-w-5xl mx-auto">
           <div className="grid items-center gap-8 sm:grid-cols-[minmax(0,1fr)_220px]">
             <div className="order-2 text-center sm:order-1 sm:text-left">

@@ -11,7 +11,7 @@ const ProjectsTimeline: React.FC<ProjectsTimelineProps> = ({ projectsData }) => 
   );
 
   return (
-    <section className="portfolio-section">
+    <section id="projects" className="portfolio-section">
       <div className="portfolio-container">
         <div className="grid gap-8 sm:grid-cols-12">
           <div className="col-span-12 sm:col-span-3">
