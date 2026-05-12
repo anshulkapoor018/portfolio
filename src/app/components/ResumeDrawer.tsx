@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import {
   ArrowDownTrayIcon,
   ArrowTopRightOnSquareIcon,
@@ -20,8 +21,11 @@ const highlights = [
 
 const ResumeDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
+
     const openDrawer = () => setIsOpen(true);
 
     window.addEventListener('portfolio:open-resume', openDrawer);
@@ -46,20 +50,10 @@ const ResumeDrawer = () => {
     };
   }, [isOpen]);
 
-  return (
-    <>
-      <button
-        type="button"
-        className="portfolio-hero-action"
-        onClick={() => setIsOpen(true)}
-      >
-        <DocumentTextIcon className="h-5 w-5" aria-hidden="true" />
-        View Resume
-      </button>
-
-      {isOpen && (
+  const drawer = mounted && isOpen
+    ? createPortal(
         <div
-          className="fixed inset-0 z-50 flex items-end justify-end bg-black/50 backdrop-blur-sm sm:items-stretch"
+          className="fixed inset-0 z-[9999] flex items-end justify-end bg-black/50 backdrop-blur-sm sm:items-stretch"
           role="dialog"
           aria-modal="true"
           aria-label="Resume preview"
@@ -121,41 +115,41 @@ const ResumeDrawer = () => {
                 </ul>
               </div>
 
-              <div className="rounded-lg border bg-white p-6 text-slate-900 shadow-sm" style={{ borderColor: 'var(--portfolio-line)' }}>
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-orange-600">Resume Preview</p>
+              <div className="portfolio-card p-6">
+                <p className="text-xs font-bold uppercase tracking-[0.18em]" style={{ color: 'var(--portfolio-accent)' }}>Resume Preview</p>
                 <h3 className="mt-3 text-3xl font-bold tracking-normal">Anshul Kapoor</h3>
-                <p className="mt-1 text-sm font-semibold text-slate-600">Software Engineer · Product & Platform Engineering</p>
-                <div className="mt-5 h-px bg-slate-200" />
+                <p className="portfolio-muted mt-1 text-sm font-semibold">Software Engineer · Product & Platform Engineering</p>
+                <div className="mt-5 h-px" style={{ background: 'var(--portfolio-line)' }} />
                 <div className="mt-5 grid gap-5">
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Current Focus</p>
-                    <p className="mt-2 text-sm leading-6 text-slate-700">
+                    <p className="portfolio-subtle text-xs font-bold uppercase tracking-wide">Current Focus</p>
+                    <p className="portfolio-muted mt-2 text-sm leading-6">
                       Modernizing BILL Accounts Receivable workflows with scalable frontend architecture,
                       GraphQL-driven systems, and AI-assisted engineering practices.
                     </p>
                   </div>
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Experience Snapshot</p>
+                    <p className="portfolio-subtle text-xs font-bold uppercase tracking-wide">Experience Snapshot</p>
                     <div className="mt-3 space-y-3 text-sm">
                       <div>
                         <p className="font-bold">BILL · Software Engineer II</p>
-                        <p className="text-slate-500">Jun 2024 - Present</p>
+                        <p className="portfolio-subtle">Jun 2024 - Present</p>
                       </div>
                       <div>
                         <p className="font-bold">BillGo · Software Engineer III</p>
-                        <p className="text-slate-500">Feb 2023 - Mar 2024</p>
+                        <p className="portfolio-subtle">Feb 2023 - Mar 2024</p>
                       </div>
                       <div>
                         <p className="font-bold">BillGo · Software Engineer II</p>
-                        <p className="text-slate-500">Jul 2021 - Jan 2023</p>
+                        <p className="portfolio-subtle">Jul 2021 - Jan 2023</p>
                       </div>
                     </div>
                   </div>
                   <div>
-                    <p className="text-xs font-bold uppercase tracking-wide text-slate-500">Core Stack</p>
+                    <p className="portfolio-subtle text-xs font-bold uppercase tracking-wide">Core Stack</p>
                     <div className="mt-3 flex flex-wrap gap-2">
                       {['Angular', 'React', 'TypeScript', 'GraphQL', 'Microfrontends', 'React Native'].map((item) => (
-                        <span key={item} className="rounded-full border border-slate-300 px-3 py-1 text-xs font-bold text-slate-700">
+                        <span key={item} className="portfolio-chip px-3 py-1 text-xs">
                           {item}
                         </span>
                       ))}
@@ -165,8 +159,23 @@ const ResumeDrawer = () => {
               </div>
             </div>
           </aside>
-        </div>
-      )}
+        </div>,
+        document.body,
+      )
+    : null;
+
+  return (
+    <>
+      <button
+        type="button"
+        className="portfolio-hero-action"
+        onClick={() => setIsOpen(true)}
+      >
+        <DocumentTextIcon className="h-5 w-5" aria-hidden="true" />
+        View Resume
+      </button>
+
+      {drawer}
     </>
   );
 };

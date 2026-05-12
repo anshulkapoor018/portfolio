@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faSquarePhoneFlip } from '@fortawesome/free-solid-svg-icons';
 import ResumeDrawer from './ResumeDrawer';
+import HeroConstellation from './HeroConstellation';
 config.autoAddCss = false;
 
 const expertise = [
@@ -19,8 +20,9 @@ const expertise = [
 
 const Header = () => {
     return (
-      <header id="home" className="portfolio-section px-5 pb-10 pt-6 sm:pb-14">
-        <div className="container max-w-5xl mx-auto">
+      <header id="home" className="portfolio-section portfolio-hero px-5 pb-10 pt-6 sm:pb-14">
+        <HeroConstellation />
+        <div className="container relative z-10 max-w-5xl mx-auto">
           <div className="grid items-center gap-8 sm:grid-cols-[minmax(0,1fr)_220px]">
             <div className="order-2 text-center sm:order-1 sm:text-left">
               <p className="mb-3 text-xs font-semibold tracking-[0.18em] uppercase" style={{ color: 'var(--portfolio-accent)' }}>

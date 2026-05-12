@@ -72,6 +72,27 @@ body {
     color: var(--portfolio-text);
   }
 
+  .portfolio-hero {
+    @apply relative overflow-hidden;
+    isolation: isolate;
+  }
+
+  .portfolio-constellation {
+    @apply pointer-events-none absolute inset-0 h-full w-full;
+    opacity: 0.9;
+    transition: opacity 300ms ease;
+    z-index: 1;
+  }
+
+  .portfolio-hero::after {
+    @apply pointer-events-none absolute inset-0;
+    background:
+      radial-gradient(circle at 74% 18%, color-mix(in srgb, var(--portfolio-accent) 12%, transparent), transparent 28%),
+      linear-gradient(90deg, var(--portfolio-bg) 0%, color-mix(in srgb, var(--portfolio-bg) 86%, transparent) 45%, var(--portfolio-bg) 100%);
+    content: "";
+    z-index: 0;
+  }
+
   .portfolio-container {
     @apply container max-w-5xl px-5 py-10 mx-auto sm:py-12;
   }
